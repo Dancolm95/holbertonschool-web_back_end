@@ -10,4 +10,4 @@ def floor(n: float) -> int:
     """
     Return int value less than or equal to n.
     """
-    return math.floor(n)
+    return int(n) if n >= 0 else int(n) - 1
