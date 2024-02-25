@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Description: Create a measure_time function with integers 
+Description: Create a measure_time function with integers
              n and max_delay as arguments that measures the
              total execution time for wait_n(n, max_delay),
-             and returns total_time / n. 
+             and returns total_time / n.
              Your function should return a float.
-Arguments: n: int, max_delay: int             
+Arguments: n: int, max_delay: int
 """
 
 
