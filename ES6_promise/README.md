@@ -1,0 +1,1 @@
+Project of promise ES6
