@@ -3,7 +3,7 @@ export default function getFullResponseFromAPI(success) {
     if (success) {
       resolve ({
         status: 200,
-        body: 'Succes',
+        body: "Succes",
       });
     } else {
       reject(new Error('The fake API is not working currently'));
