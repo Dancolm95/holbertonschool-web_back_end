@@ -1,1 +1,1 @@
-ES6 - CLASS
+Project of es6_classes
