@@ -9,7 +9,8 @@ export default class Car {
   // Methods
 
   cloneCar() {
-    const NewObj = this.constructor[Symbol.species] || this.constructor;
-    const clone = new NewObj();
-    return clone;
+    const newCar = new Car();
+    Object.setPrototypeOf(newCar, Object.getPrototypeOf(this));
+    return newCar;
   }
+}
