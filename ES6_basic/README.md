@@ -1,1 +1,1 @@
-New proyecjt of ES6_basic
+readme for project ES6_basic
