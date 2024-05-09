@@ -1,1 +1,1 @@
-Project of promise ES6
+ New readme for ES6_promise
