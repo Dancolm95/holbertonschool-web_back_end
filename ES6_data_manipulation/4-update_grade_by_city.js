@@ -1,13 +1,15 @@
-export default function updateStudentGradeByCity(students, city, newGrades) {
-  // check arg is an array
-  if (Object.getPrototypeOf(students) !== Array.prototype) {
-    return [];
+export default function updateStudentGradeByCity(listStudents, city, newGrades) {
+  // Verificar que los parámetros sean válidos
+  if (!Array.isArray(listStudents) || typeof city !== 'string' || !Array.isArray(newGrades)) {
+    throw new Error('Los parámetros no son válidos.');
   }
-  if (Object.getPrototypeOf(newGrades) !== Array.prototype) {
-    return [];
-  }
-  return students.filter((student) => student.location === city).map((student) => {
-    const [newGrade] = newGrades.filter((item) => item.studentId === student.id);
-    return { ...student, grade: newGrade ? newGrade.grade : 'N/A' };
-  });
+
+  // Filtrar estudiantes por ciudad y actualizar calificaciones
+  return listStudents
+    .filter((student) => student.location === city)
+    .map((student) => {
+      const matchingGrade = newGrades.find((grade) => grade.studentId === student.id);
+      const grade = matchingGrade ? matchingGrade.grade : 'N/A';
+      return { ...student, grade };
+    });
 }
